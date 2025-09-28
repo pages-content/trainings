@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>@author</title>
+    <link>https://github.com/pages-content/trainings/</link>
+    <atom:link href="https://github.com/pages-content/trainings//feed.xml" rel="self" type="application/rss+xml" />
+    <description>@author's feeds</description>
+    <language>fr-fr</language>
+    <pubDate>Sun, 28 Sep 2025 21:36:09 +0000</pubDate>
+    <lastBuildDate>Sun, 28 Sep 2025 21:36:09 +0000</lastBuildDate>
+
+    <item>
+      <title>Test2</title>
+      <link>https://github.com/pages-content/trainings//blog/2025/0078_test_post2.html</link>
+      <pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">blog/2025/0078_test_post2.html</guid>
+      	<description>
+	&lt;div id=&quot;toc&quot; class=&quot;toc&quot;&gt;
+&lt;div id=&quot;toctitle&quot;&gt;Sommaire&lt;/div&gt;
+&lt;ul class=&quot;sectlevel1&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#_introduction&quot;&gt;1. Introduction&lt;/a&gt;
+&lt;ul class=&quot;sectlevel2&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#_test2_commentaire&quot;&gt;1.1. Test2 commentaire&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;&lt;em&gt;Temps de lecture :&lt;/em&gt;&lt;/div&gt;
+&lt;p&gt;10 secondes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;&lt;em&gt;Public cible :&lt;/em&gt;&lt;/div&gt;
+&lt;p&gt;Testeurs&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;_introduction&quot;&gt;1. Introduction&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;_test2_commentaire&quot;&gt;1.1. Test2 commentaire&lt;/h3&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>https://github.com/pages-content/trainings//blog/2025/0077_test_post.html</link>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">blog/2025/0077_test_post.html</guid>
+      	<description>
+	&lt;div id=&quot;toc&quot; class=&quot;toc&quot;&gt;
+&lt;div id=&quot;toctitle&quot;&gt;Sommaire&lt;/div&gt;
+&lt;ul class=&quot;sectlevel1&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#_introduction&quot;&gt;1. Introduction&lt;/a&gt;
+&lt;ul class=&quot;sectlevel2&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#_test_commentaire&quot;&gt;1.1. Test commentaire&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;&lt;em&gt;Temps de lecture :&lt;/em&gt;&lt;/div&gt;
+&lt;p&gt;10 secondes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;&lt;em&gt;Public cible :&lt;/em&gt;&lt;/div&gt;
+&lt;p&gt;Testeurs&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;_introduction&quot;&gt;1. Introduction&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;_test_commentaire&quot;&gt;1.1. Test commentaire&lt;/h3&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+
+  </channel> 
+</rss>
