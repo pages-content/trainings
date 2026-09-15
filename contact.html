@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="google-site-verification" content="oTZL-J0lpqoMMfQvrhFBaPfG1gtsswFKz1RzHoMLgbo"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="talaria.school — vendeur de formations. Formations professionnelles FPA et CDA, vendues par module (60 €) ou en bloc complet (420 €), sans compte."/>
+    <meta name="author" content="talaria.school"/>
+    <meta name="keywords" content="formation, FPA, CDA, formateur professionnel d'adultes, concepteur développeur d'applications"/>
+
+    <title>Contact — talaria.school</title>
+
+    <link href="css/style.css" rel="stylesheet"/>
+
+    <link rel="shortcut icon"
+          href="favicon.ico"/>
+
+    <!-- intl-tel-input CSS — international dial-code selector (mirrors cheroliv.com) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.1/build/css/intlTelInput.css" integrity="sha384-huckmaRY7yjByQizNg4/mcNFFWSCC1CCl6aFYN9cGKc7zuKh7+XNuoSpLwyEgCmk" crossorigin="anonymous">
+</head>
+<body>
+<div>
+    <!-- Skip link — lets keyboard users bypass the JS-injected navigation (WCAG 2.4.1). -->
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Aller au contenu principal</a>
+    <!-- Header mount point — the ui2 nav (21 languages, cart badge, scroll-to-top)
+         is injected by js/header.js at DOMContentLoaded, then localized by i18n.js. -->
+    <div id="site-header"></div>
+</div>
+
+<main class="page" id="main-content">
+    <div class="container">
+        <section class="section" aria-labelledby="t-contact">
+            <h1 class="section-title" id="t-contact" data-i18n="contact.title">Nous contacter</h1>
+            <p class="lead" data-i18n="contact.description">
+                Une question sur une formation, un module, l'accès à la plateforme ? Écrivez-nous,
+                nous vous répondrons dans les plus brefs délais.
+            </p>
+
+            <div class="contact-form">
+                <form id="contact-form">
+                    <!-- Honeypot anti-spam (invisible for humans) -->
+                    <div style="position:absolute;left:-9999px" aria-hidden="true">
+                        <input type="text" name="hp_name" tabindex="-1" autocomplete="off" />
+                    </div>
+                    <div class="form-row">
+                        <label for="name" data-i18n="contact.name.label">Nom</label>
+                        <input type="text" id="name" name="name" class="form-control"
+                               placeholder="Votre nom" data-i18n-ph="contact.name.placeholder" required />
+                    </div>
+                    <div class="form-row">
+                        <label for="email" data-i18n="contact.email.label">Email</label>
+                        <input type="email" id="email" name="email" class="form-control"
+                               placeholder="Votre email" data-i18n-ph="contact.email.placeholder" required />
+                    </div>
+                    <div class="form-row">
+                        <label for="phone" data-i18n="contact.phone.label">Téléphone (optionnel)</label>
+                        <input type="tel" id="phone" name="phone" class="form-control"
+                               placeholder="Votre numéro" data-i18n-ph="contact.phone.placeholder" />
+                    </div>
+                    <div class="form-row">
+                        <label for="message" data-i18n="contact.message.label">Message</label>
+                        <textarea id="message" name="message" class="form-control" rows="5"
+                                  placeholder="Votre message" data-i18n-ph="contact.message.placeholder" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" data-i18n="contact.button.submit">Envoyer le Message</button>
+                    </div>
+                    <div id="contact-success-message" class="alert alert-success mt-3" role="alert" style="display:none" data-i18n="contact.success">
+                        Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
+                    </div>
+                    <div id="contact-error-message" class="alert alert-danger mt-3" role="alert" style="display:none" data-i18n="contact.error">
+                        Une erreur est survenue lors de l'envoi. Veuillez réessayer.
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</main>
+
+<div>
+    <!-- Footer mount point — the ui2 footer is injected by js/header.js. -->
+    <div id="site-footer"></div>
+
+    <!-- Common ui2 assets (client-side i18n 21 languages, catalog, cart, nav). -->
+    
+        <script src="js/i18n.js"></script>
+        <script src="js/i18n-extra-langs.js"></script>
+        <script src="js/i18n-content.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/db.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/phone-format.js"></script>
+        <script src="js/contact.js"></script>
+    
+
+    <!-- intl-tel-input JS — international dial-code selector (mirrors cheroliv.com) -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.1/build/js/intlTelInput.min.js" integrity="sha384-tu2ddrBDiy1H44Ve2/1KjirLOOghLqZja42n/44oo+uDwcXF5oaxhu6Xi2zZr9nE" crossorigin="anonymous"></script>
+    
+        <script src="js/phone-input.js"></script>
+        <!-- Firebase bootstrap: config resolution first, SDK install second. -->
+        <script src="js/firebase-config.local.js"></script>
+        <script src="js/firebase-config.js"></script>
+        <script src="js/firebase-app.js"></script>
+    
+</div>
+</body>
+</html>
