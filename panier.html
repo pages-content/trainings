@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="google-site-verification" content="oTZL-J0lpqoMMfQvrhFBaPfG1gtsswFKz1RzHoMLgbo"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="talaria.school — vendeur de formations. Formations professionnelles FPA et CDA, vendues par module (60 €) ou en bloc complet (420 €), sans compte."/>
+    <meta name="author" content="talaria.school"/>
+    <meta name="keywords" content="formation, FPA, CDA, formateur professionnel d'adultes, concepteur développeur d'applications"/>
+
+    <title>Panier — talaria.school</title>
+
+    <link href="css/style.css" rel="stylesheet"/>
+
+    <link rel="shortcut icon"
+          href="favicon.ico"/>
+
+    <!-- intl-tel-input CSS — international dial-code selector (mirrors cheroliv.com) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.1/build/css/intlTelInput.css" integrity="sha384-huckmaRY7yjByQizNg4/mcNFFWSCC1CCl6aFYN9cGKc7zuKh7+XNuoSpLwyEgCmk" crossorigin="anonymous">
+</head>
+<body>
+<div>
+    <!-- Skip link — lets keyboard users bypass the JS-injected navigation (WCAG 2.4.1). -->
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Aller au contenu principal</a>
+    <!-- Header mount point — the ui2 nav (22 languages, cart badge, scroll-to-top)
+         is injected by js/header.js at DOMContentLoaded, then localized by i18n.js. -->
+    <div id="site-header"></div>
+</div>
+
+<!-- Page header — design system v2 (EPIC T-JBAKE-DS US-4). -->
+<div class="tunnel-header">
+    <div class="container">
+        <div class="section-eyebrow" data-i18n="panier.chip">Commande</div>
+        <h1 data-i18n="panier.title">Panier &amp; paiement</h1>
+        <p class="lead" data-i18n="panier.lead">Finalisez votre achat. Le paiement est géré par notre
+           boutique serverless (Firebase) —<strong> aucun compte à créer</strong> :
+           votre e-mail ou téléphone sert de référence pour le suivi de vente.</p>
+    </div>
+</div>
+
+<main class="page" id="main-content">
+    <div class="container">
+        <div class="detail-split" id="checkout-box">
+            <section class="card" aria-labelledby="t-items">
+                <div class="card-body">
+                    <h2 class="section-title" id="t-items" style="font-size:1.2rem;" data-i18n="panier.orderTitle">Votre commande</h2>
+                    <div id="cart-summary"></div>
+                    <div class="total" style="margin-top:1rem;">
+                        <span id="total-label" data-i18n="panier.total">Total</span>
+                        <span id="total-amount">0 €</span>
+                    </div>
+                    <a class="btn btn-outline-dark btn-block mt-1" href="catalogue.html" data-i18n="panier.continue">Continuer mes achats</a>
+                </div>
+            </section>
+
+            <aside class="card" aria-labelledby="t-contact">
+                <div class="card-body">
+                    <h2 class="section-title" id="t-contact" style="font-size:1.2rem;" data-i18n="panier.identity">Identité du client</h2>
+                    <form id="checkout-form" class="form-grid">
+                        <div class="form-row">
+                            <label for="fullName" data-i18n="panier.fullName">Nom complet</label>
+                            <input class="form-control" type="text" id="fullName" name="fullName"
+                                   autocomplete="name" placeholder="Prénom Nom">
+                        </div>
+                        <div class="form-row">
+                            <label for="email" data-i18n="panier.email">E-mail <span class="hint" data-i18n="panier.emailHint">(pour le suivi de vente)</span></label>
+                            <input class="form-control" type="email" id="email" name="email"
+                                   autocomplete="email" placeholder="vous@exemple.fr">
+                            <div class="field-error" id="err-email"></div>
+                        </div>
+                        <div class="form-row">
+                            <label for="phone" data-i18n="panier.phone">Téléphone <span class="hint" data-i18n="panier.phoneHint">(ou e-mail pour le suivi)</span></label>
+                            <input class="form-control" type="tel" id="phone" name="phone"
+                                   autocomplete="tel" placeholder="+33 6 12 34 56 78">
+                            <div class="field-error" id="err-phone"></div>
+                        </div>
+                        <div class="notice" data-i18n="panier.notice">
+                            <strong>Au moins un des deux</strong> (e-mail ou téléphone) sera utilisé
+                            pour identifier et suivre votre commande. Aucun compte, aucune
+                            authentification.
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="pay-btn" disabled data-i18n="panier.pay">
+                            Payer (simulation)
+                        </button>
+                        <p class="hint" data-i18n="panier.simHint">Cette maquette simule le paiement. En production, l'encaissement est
+                           délégué à Firebase Payments et la commande enregistrée dans Firestore
+                           (EPIC T-FIREBASE).</p>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<div>
+    <!-- Footer mount point — the ui2 footer is injected by js/header.js. -->
+    <div id="site-footer"></div>
+
+    <!-- Common ui2 assets (client-side i18n 22 languages, catalog, cart, nav). -->
+    
+        <script src="js/i18n.js"></script>
+        <script src="js/i18n-extra-langs.js"></script>
+        <script src="js/i18n-content.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/db.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/phone-format.js"></script>
+        <script src="js/contact.js"></script>
+    
+
+    <!-- intl-tel-input JS — international dial-code selector (mirrors cheroliv.com) -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.1/build/js/intlTelInput.min.js" integrity="sha384-tu2ddrBDiy1H44Ve2/1KjirLOOghLqZja42n/44oo+uDwcXF5oaxhu6Xi2zZr9nE" crossorigin="anonymous"></script>
+    
+        <script src="js/phone-input.js"></script>
+        <!-- Firebase bootstrap: config resolution first, SDK install second. -->
+        <script src="js/firebase-config.local.js"></script>
+        <script src="js/firebase-config.js"></script>
+        <script src="js/firebase-app.js"></script>
+        <!-- Turnstile bootstrap: same order — placeholder config first, then the wiring. -->
+        <script src="js/turnstile-config.local.js"></script>
+        <script src="js/turnstile.js"></script>
+    
+</div>
+<script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="google-site-verification" content="oTZL-J0lpqoMMfQvrhFBaPfG1gtsswFKz1RzHoMLgbo"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="talaria.school — vendeur de formations. Formations professionnelles FPA et CDA, vendues par module (60 €) ou en bloc complet (420 €), sans compte."/>
+    <meta name="author" content="talaria.school"/>
+    <meta name="keywords" content="formation, FPA, CDA, formateur professionnel d'adultes, concepteur développeur d'applications"/>
+
+    <title>Support — talaria.school</title>
+
+    <link href="css/style.css" rel="stylesheet"/>
+
+    <link rel="shortcut icon"
+          href="favicon.ico"/>
+
+    <!-- intl-tel-input CSS — international dial-code selector (mirrors cheroliv.com) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.1/build/css/intlTelInput.css" integrity="sha384-huckmaRY7yjByQizNg4/mcNFFWSCC1CCl6aFYN9cGKc7zuKh7+XNuoSpLwyEgCmk" crossorigin="anonymous">
+</head>
+<body>
+<div>
+    <!-- Skip link — lets keyboard users bypass the JS-injected navigation (WCAG 2.4.1). -->
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Aller au contenu principal</a>
+    <!-- Header mount point — the ui2 nav (22 languages, cart badge, scroll-to-top)
+         is injected by js/header.js at DOMContentLoaded, then localized by i18n.js. -->
+    <div id="site-header"></div>
+</div>
+
+<!-- Page header — design system v2 (EPIC T-JBAKE-DS US-3). -->
+<div class="support-header">
+    <div class="container">
+        <div class="section-eyebrow" data-i18n="support.chip">Support</div>
+        <h1 id="t-support" data-i18n="support.title">Comment pouvons-nous vous aider ?</h1>
+        <p class="lead" data-i18n="support.lead">
+            Un problème d'accès à votre ressource ? Une question sur votre commande ?
+            Nous répondons en moins de 24 h, du lundi au vendredi.
+        </p>
+    </div>
+</div>
+
+<main class="page" id="main-content">
+    <div class="container">
+
+        <!-- Carte de contact rapide -->
+        <h2 class="section-title" style="font-size:1.15rem;margin-bottom:1rem;" data-i18n="support.contact">Nous contacter</h2>
+        <div class="support-contact-card" style="margin-bottom:2.5rem;">
+            <div class="support-contact-item">
+                <div class="support-contact-icon">✉️</div>
+                <div class="support-contact-info">
+                    <strong data-i18n="support.emailLabel">Par email :</strong>
+                    <a href="mailto:support@talaria.school">support@talaria.school</a>
+                    <span data-i18n="support.replyUnder24h">Réponse sous 24 h</span>
+                </div>
+            </div>
+            <div class="support-contact-item">
+                <div class="support-contact-icon">📞</div>
+                <div class="support-contact-info">
+                    <strong data-i18n="support.phoneLabel">Téléphone</strong>
+                    <p data-i18n="support.phone">Par téléphone : +33 1 23 45 67 89</p>
+                    <span data-i18n="support.horaires">Horaires : Lundi-Vendredi, 9h-18h</span>
+                </div>
+            </div>
+            <div class="support-contact-item">
+                <div class="support-contact-icon">⏱️</div>
+                <div class="support-contact-info">
+                    <strong data-i18n="support.responseDelay">Délai de réponse</strong>
+                    <span style="color:var(--ink);font-weight:500" data-i18n="support.under24h">Moins de 24 h</span>
+                    <span data-i18n="support.workingDays">En jours ouvrés</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layout principal -->
+        <div class="support-layout">
+
+            <!-- Colonne gauche : formulaire + FAQ -->
+            <div>
+                <!-- Formulaire -->
+                <div class="contact-form-card" style="margin-bottom:2rem;">
+                    <div class="contact-form-header">
+                        <h2 data-i18n="contact.title">Envoyer un message</h2>
+                        <p data-i18n="contact.description">Décrivez votre situation, nous vous répondrons rapidement.</p>
+                    </div>
+                    <div class="contact-form-body">
+                        <form id="contact-form">
+                            <!-- Honeypot anti-spam (invisible for humans) -->
+                            <div style="position:absolute;left:-9999px" aria-hidden="true">
+                                <input type="text" name="hp_name" tabindex="-1" autocomplete="off" />
+                            </div>
+                            <div class="form-row">
+                                <label for="name" data-i18n="contact.name.label">Nom</label>
+                                <input type="text" id="name" name="name" class="form-control"
+                                       placeholder="Votre nom" data-i18n-ph="contact.name.placeholder" required />
+                            </div>
+                            <div class="form-row">
+                                <label for="email" data-i18n="contact.email.label">E-mail</label>
+                                <input type="email" id="email" name="email" class="form-control"
+                                       placeholder="Votre adresse e-mail" data-i18n-ph="contact.email.placeholder" required />
+                            </div>
+                            <div class="form-row">
+                                <label for="phone" data-i18n="contact.phone.label">Téléphone (optionnel)</label>
+                                <input type="tel" id="phone" name="phone" class="form-control"
+                                       placeholder="Votre numéro" data-i18n-ph="contact.phone.placeholder" />
+                            </div>
+                            <div class="form-row">
+                                <label for="message" data-i18n="contact.message.label">Message</label>
+                                <textarea id="message" name="message" class="form-control" rows="5"
+                                          placeholder="Décrivez votre situation ou votre question..." data-i18n-ph="contact.message.placeholder" required></textarea>
+                            </div>
+                            <!-- Cloudflare Turnstile — anti-bot widget, armed by the deployment config. -->
+                            <div id="cf-turnstile-mount"></div>
+                            <input type="hidden" name="cf_turnstile_token" value="" />
+                            <button type="submit" class="btn btn-primary btn-block" data-i18n="contact.button.submit">Envoyer le message</button>
+                            <div id="contact-success-message" class="toast show" role="alert" style="display:none" data-i18n="contact.success">
+                                ✓ Message envoyé ! Nous vous répondrons sous 24 h.
+                            </div>
+                            <div id="contact-error-message" role="alert" style="display:none;color:var(--danger);font-size:0.88rem;margin-top:0.5rem;" data-i18n="contact.error">
+                                Une erreur est survenue. Veuillez réessayer.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="section-eyebrow" style="margin-bottom:1rem;" data-i18n="support.faq">Questions fréquentes</div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3 data-i18n="faq.question1">Comment recevoir mon code de validation après paiement ?</h3>
+                        <p data-i18n="faq.answer1">Le code est envoyé automatiquement par e-mail dès confirmation du paiement. Vérifiez votre boîte de réception et vos spams.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 data-i18n="faq.question2">Je n'ai pas reçu le SMS avec le lien de téléchargement, que faire ?</h3>
+                        <p data-i18n="faq.answer2">Vérifiez que le numéro saisi lors du paiement est correct. Si le problème persiste, contactez notre support pour une vérification manuelle.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 data-i18n="faq.question3">Comment télécharger ma ressource après validation ?</h3>
+                        <p data-i18n="faq.answer3">Après validation du code et confirmation du lien SMS, vous recevez un lien de téléchargement sécurisé valable 24 heures.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 data-i18n="faq.question4">Ma ressource ne s'ouvre pas, quel format est utilisé ?</h3>
+                        <p data-i18n="faq.answer4">Nos ressources sont au format PDF ou vidéo MP4. Assurez-vous d'avoir un lecteur PDF à jour ou un lecteur vidéo compatible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonne droite : sidebar -->
+            <div class="support-sidebar">
+
+                <!-- Notes importantes -->
+                <div class="notes-card">
+                    <div class="notes-card-header">
+                        <h2 data-i18n="support.notes">Notes importantes</h2>
+                    </div>
+                    <div class="notes-card-body">
+                        <ul class="notes-list">
+                            <li data-i18n="support.note1">Aucun compte : votre identifiant est votre e-mail ou téléphone</li>
+                            <li data-i18n="support.note2">Les liens de téléchargement expirent après 24 h</li>
+                            <li data-i18n="support.note3">Vous serez notifié par e-mail en cas de mise à jour disponible</li>
+                            <li data-i18n="support.note4">Nous ne conservons pas vos données de paiement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Lien suivi de commande -->
+                <div style="background:var(--amber-pale);border:1.5px solid rgba(217,119,6,0.3);border-radius:var(--radius);padding:1.3rem;">
+                    <p style="font-family:var(--font-display);font-weight:700;color:var(--navy);font-size:0.95rem;margin-bottom:0.4rem;" data-i18n="support.follow.title">Suivre ma commande</p>
+                    <p style="font-size:0.88rem;color:var(--muted);margin-bottom:1rem;" data-i18n="support.follow.desc">Vous avez déjà commandé ? Retrouvez l'état de votre commande en quelques secondes.</p>
+                    <a href="suivi.html" class="btn btn-primary btn-block" style="font-size:0.9rem;" data-i18n="support.follow.cta">Accéder au suivi</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<div>
+    <!-- Footer mount point — the ui2 footer is injected by js/header.js. -->
+    <div id="site-footer"></div>
+
+    <!-- Common ui2 assets (client-side i18n 22 languages, catalog, cart, nav). -->
+    
+        <script src="js/i18n.js"></script>
+        <script src="js/i18n-extra-langs.js"></script>
+        <script src="js/i18n-content.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/db.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/phone-format.js"></script>
+        <script src="js/contact.js"></script>
+    
+
+    <!-- intl-tel-input JS — international dial-code selector (mirrors cheroliv.com) -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.1/build/js/intlTelInput.min.js" integrity="sha384-tu2ddrBDiy1H44Ve2/1KjirLOOghLqZja42n/44oo+uDwcXF5oaxhu6Xi2zZr9nE" crossorigin="anonymous"></script>
+    
+        <script src="js/phone-input.js"></script>
+        <!-- Firebase bootstrap: config resolution first, SDK install second. -->
+        <script src="js/firebase-config.local.js"></script>
+        <script src="js/firebase-config.js"></script>
+        <script src="js/firebase-app.js"></script>
+        <!-- Turnstile bootstrap: same order — placeholder config first, then the wiring. -->
+        <script src="js/turnstile-config.local.js"></script>
+        <script src="js/turnstile.js"></script>
+    
+</div>
+</body>
+</html>

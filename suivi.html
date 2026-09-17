@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="google-site-verification" content="oTZL-J0lpqoMMfQvrhFBaPfG1gtsswFKz1RzHoMLgbo"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="talaria.school — vendeur de formations. Formations professionnelles FPA et CDA, vendues par module (60 €) ou en bloc complet (420 €), sans compte."/>
+    <meta name="author" content="talaria.school"/>
+    <meta name="keywords" content="formation, FPA, CDA, formateur professionnel d'adultes, concepteur développeur d'applications"/>
+
+    <title>Suivre ma commande — talaria.school</title>
+
+    <link href="css/style.css" rel="stylesheet"/>
+
+    <link rel="shortcut icon"
+          href="favicon.ico"/>
+
+    <!-- intl-tel-input CSS — international dial-code selector (mirrors cheroliv.com) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.1/build/css/intlTelInput.css" integrity="sha384-huckmaRY7yjByQizNg4/mcNFFWSCC1CCl6aFYN9cGKc7zuKh7+XNuoSpLwyEgCmk" crossorigin="anonymous">
+</head>
+<body>
+<div>
+    <!-- Skip link — lets keyboard users bypass the JS-injected navigation (WCAG 2.4.1). -->
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Aller au contenu principal</a>
+    <!-- Header mount point — the ui2 nav (22 languages, cart badge, scroll-to-top)
+         is injected by js/header.js at DOMContentLoaded, then localized by i18n.js. -->
+    <div id="site-header"></div>
+</div>
+
+<!-- Page header — design system v2 (EPIC T-JBAKE-DS US-4). -->
+<div class="tunnel-header">
+    <div class="container">
+        <div class="section-eyebrow" data-i18n="suivi.chip">Suivi de vente</div>
+        <h1 data-i18n="suivi.title">Retrouvez vos commandes</h1>
+        <p class="lead" data-i18n="suivi.lead">Sans compte, votre e-mail ou téléphone sert de clé de suivi.
+           Saisissez l'un des deux pour lister vos achats.</p>
+    </div>
+</div>
+
+<main class="page" id="main-content">
+    <div class="container">
+        <section class="card" style="max-width:640px;">
+            <div class="card-body">
+                <form id="follow-form" class="form-grid">
+                    <div class="form-row">
+                        <label for="f-email" data-i18n="suivi.emailLabel">E-mail utilisé à la commande</label>
+                        <input class="form-control" type="email" id="f-email" autocomplete="email"
+                               placeholder="vous@exemple.fr">
+                    </div>
+                    <div class="form-row">
+                        <label for="f-phone" data-i18n="suivi.phoneLabel">Ou téléphone</label>
+                        <input class="form-control" type="tel" id="f-phone" autocomplete="tel"
+                               placeholder="+33 6 12 34 56 78">
+                        <div class="field-error" id="err-follow"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-i18n="suivi.search">Rechercher</button>
+                    <p class="hint" data-i18n="suivi.hint">En production, la recherche s'appuiera sur la collection Firestore
+                       `orders` (indexée). En maquette, les commandes sont stockées localement dans ce navigateur.</p>
+                </form>
+            </div>
+        </section>
+
+        <section class="section mt-3" id="blank" aria-live="polite">
+            <p class="muted" data-i18n="suivi.blank">Aucune recherche pour l'instant — vos commandes apparaîtront ici.</p>
+        </section>
+
+        <section id="results"></section>
+
+        <section class="section mt-4" id="support">
+            <h2 class="section-title" data-i18n="support.title">Besoin d'aide ?</h2>
+            <p data-i18n="support.lead">Si vous rencontrez des difficultés pour suivre votre commande ou accéder à vos ressources, notre support est là pour vous aider.</p>
+            <a href="support.html" class="btn btn-primary" data-i18n="support.cta">Accéder au support</a>
+        </section>
+    </div>
+</main>
+
+<div>
+    <!-- Footer mount point — the ui2 footer is injected by js/header.js. -->
+    <div id="site-footer"></div>
+
+    <!-- Common ui2 assets (client-side i18n 22 languages, catalog, cart, nav). -->
+    
+        <script src="js/i18n.js"></script>
+        <script src="js/i18n-extra-langs.js"></script>
+        <script src="js/i18n-content.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/db.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/phone-format.js"></script>
+        <script src="js/contact.js"></script>
+    
+
+    <!-- intl-tel-input JS — international dial-code selector (mirrors cheroliv.com) -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.1/build/js/intlTelInput.min.js" integrity="sha384-tu2ddrBDiy1H44Ve2/1KjirLOOghLqZja42n/44oo+uDwcXF5oaxhu6Xi2zZr9nE" crossorigin="anonymous"></script>
+    
+        <script src="js/phone-input.js"></script>
+        <!-- Firebase bootstrap: config resolution first, SDK install second. -->
+        <script src="js/firebase-config.local.js"></script>
+        <script src="js/firebase-config.js"></script>
+        <script src="js/firebase-app.js"></script>
+        <!-- Turnstile bootstrap: same order — placeholder config first, then the wiring. -->
+        <script src="js/turnstile-config.local.js"></script>
+        <script src="js/turnstile.js"></script>
+    
+</div>
+<script src="js/suivi.js"></script>
+</body>
+</html>

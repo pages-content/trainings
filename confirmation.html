@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="google-site-verification" content="oTZL-J0lpqoMMfQvrhFBaPfG1gtsswFKz1RzHoMLgbo"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="talaria.school — vendeur de formations. Formations professionnelles FPA et CDA, vendues par module (60 €) ou en bloc complet (420 €), sans compte."/>
+    <meta name="author" content="talaria.school"/>
+    <meta name="keywords" content="formation, FPA, CDA, formateur professionnel d'adultes, concepteur développeur d'applications"/>
+
+    <title>Confirmation — talaria.school</title>
+
+    <link href="css/style.css" rel="stylesheet"/>
+
+    <link rel="shortcut icon"
+          href="favicon.ico"/>
+
+    <!-- intl-tel-input CSS — international dial-code selector (mirrors cheroliv.com) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.1/build/css/intlTelInput.css" integrity="sha384-huckmaRY7yjByQizNg4/mcNFFWSCC1CCl6aFYN9cGKc7zuKh7+XNuoSpLwyEgCmk" crossorigin="anonymous">
+</head>
+<body>
+<div>
+    <!-- Skip link — lets keyboard users bypass the JS-injected navigation (WCAG 2.4.1). -->
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Aller au contenu principal</a>
+    <!-- Header mount point — the ui2 nav (22 languages, cart badge, scroll-to-top)
+         is injected by js/header.js at DOMContentLoaded, then localized by i18n.js. -->
+    <div id="site-header"></div>
+</div>
+
+<!-- Page header — design system v2 (EPIC T-JBAKE-DS US-4). -->
+<div class="tunnel-header">
+    <div class="container">
+        <div class="section-eyebrow" data-i18n="confirmation.chip">✅ Commande confirmée</div>
+        <h1 data-i18n="confirmation.title">Merci pour votre achat</h1>
+        <p class="lead" data-i18n="confirmation.lead">Votre commande est enregistrée. Gardez le numéro
+           ci-dessous et utilisez votre <strong>e-mail ou téléphone</strong>
+           pour la suivre à tout moment.</p>
+    </div>
+</div>
+
+<main class="page" id="main-content">
+    <div class="container">
+        <div id="confirmation">
+            <div class="detail-split">
+                <section class="order-card">
+                    <div class="d-flex" style="justify-content:space-between">
+                        <div class="order-id" id="order-id">…</div>
+                        <span class="status status-success" id="order-status">…</span>
+                    </div>
+                    <p class="small muted" id="order-date"></p>
+                    <div id="conf-items"></div>
+                    <div class="total">
+                        <span data-i18n="confirmation.total">Total</span>
+                        <span id="conf-total">…</span>
+                    </div>
+                    <div class="notice mt-2" id="conf-contact"></div>
+                </section>
+
+                <aside class="card">
+                    <div class="card-body">
+                        <h2 style="font-size:1.15rem; margin-bottom:.6rem;" data-i18n="confirmation.afterTitle">Et ensuite ?</h2>
+                        <ul style="padding-left:1.15rem; display:grid; gap:.45rem;">
+                            <li data-i18n="confirmation.after1">Vous recevrez l'accès aux modules (simulation).</li>
+                            <li data-i18n="confirmation.after2">Suivez votre commande par e-mail ou téléphone.</li>
+                            <li data-i18n="confirmation.after3">Questions ? Contactez-nous avec votre numéro de commande.</li>
+                        </ul>
+                        <a class="btn btn-primary btn-block mt-2" id="follow-link" href="suivi.html" data-i18n="confirmation.follow">Suivre ma commande</a>
+                        <a class="btn btn-outline-dark btn-block mt-1" href="catalogue.html" data-i18n="confirmation.seef">Voir les formations</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div>
+    <!-- Footer mount point — the ui2 footer is injected by js/header.js. -->
+    <div id="site-footer"></div>
+
+    <!-- Common ui2 assets (client-side i18n 22 languages, catalog, cart, nav). -->
+    
+        <script src="js/i18n.js"></script>
+        <script src="js/i18n-extra-langs.js"></script>
+        <script src="js/i18n-content.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/db.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/phone-format.js"></script>
+        <script src="js/contact.js"></script>
+    
+
+    <!-- intl-tel-input JS — international dial-code selector (mirrors cheroliv.com) -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.1/build/js/intlTelInput.min.js" integrity="sha384-tu2ddrBDiy1H44Ve2/1KjirLOOghLqZja42n/44oo+uDwcXF5oaxhu6Xi2zZr9nE" crossorigin="anonymous"></script>
+    
+        <script src="js/phone-input.js"></script>
+        <!-- Firebase bootstrap: config resolution first, SDK install second. -->
+        <script src="js/firebase-config.local.js"></script>
+        <script src="js/firebase-config.js"></script>
+        <script src="js/firebase-app.js"></script>
+        <!-- Turnstile bootstrap: same order — placeholder config first, then the wiring. -->
+        <script src="js/turnstile-config.local.js"></script>
+        <script src="js/turnstile.js"></script>
+    
+</div>
+<script src="js/checkout.js"></script>
+</body>
+</html>
